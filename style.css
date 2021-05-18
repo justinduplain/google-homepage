@@ -1,0 +1,230 @@
+/* ReGoogle Stylesheet 0.1 by Justin Duplain */
+
+/* screen reader only content per https://accessibility.18f.gov/hidden-content */
+
+.SROnly {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  margin-top: -1px;
+  overflow: hidden;
+  padding: 0;
+  padding-bottom: 0px;
+  position: absolute;
+  width: 1px;
+}
+
+/**********************************************/
+/*** Page Layout with CSS Flexbox ***/
+/**********************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+html,
+body {
+  margin-top: 0;
+  height: 100vh;
+}
+
+#container {
+  height: 100vh;
+  min-width: 500px;
+  min-height: 455px;
+}
+
+#container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  flex: auto;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+.main-col-mid {
+  width: 50%;
+  min-width: 415px;
+  max-width: 625px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#logo,
+#search,
+#search form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+input {
+  display: ;
+}
+
+footer {
+  flex-wrap: wrap;
+}
+
+/*** Responsive Footer ***/
+
+@media only screen and (max-width: 1200px) {
+  .footer-col-left {
+    order: 2;
+    flex: 2 0 50%;
+  }
+
+  .footer-col-mid {
+    order: 1;
+    flex: 1 0 100%;
+  }
+
+  .footer-col-right {
+    order: 3;
+    flex: 2 0 50%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .footer-col-left {
+    order: 2;
+    flex: 2 0 100%;
+  }
+
+  .footer-col-mid {
+    order: 1;
+    flex: 1 0 100%;
+  }
+
+  .footer-col-right {
+    order: 3;
+    flex: 2 0 100%;
+  }
+}
+
+/**********************************************/
+/***          Content Styles                ***/
+/**********************************************/
+
+body,
+main {
+  font-family: "Segoe UI", Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95em;
+  letter-spacing: 0.1pt;
+  color: #5f5f5f;
+}
+
+/*** Nav Styles ***/
+
+nav ul {
+  padding-inline-start: 0;
+  text-align: center;
+  margin: 0;
+  padding: 3px;
+}
+
+nav > ul > li {
+  display: inline-block;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 10px;
+}
+
+#leaf {
+  height: 14px;
+  margin-right: 4px;
+}
+
+#apps {
+  height: 20px;
+}
+
+/*** Main Styles ***/
+
+#logo img {
+  width: 100%;
+  max-width: 400px;
+  min-width: 250px;
+  margin-top: 10%;
+}
+
+/* Search Form */
+
+#search form {
+  width: 100%;
+}
+
+#search input[type="text"] {
+  width: 100%;
+  padding: 1.25em 2em;
+  border: 1px solid lightgray;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+#search input[type="text"]:focus,
+#search input[type="text"]:focus-visible,
+#search input[type="text"]:hover {
+  outline: none;
+  box-shadow: 1px 1px 7px rgb(224, 224, 224);
+  border: 1px solid rgb(212, 212, 212);
+}
+
+.reGoogle-search,
+.lucky {
+  padding: 10px 20px;
+  border: 1px solid rgb(239, 239, 239);
+  margin: 10px;
+  border-radius: 5px;
+  color: #606367;
+}
+
+.reGoogle-search:hover,
+.reGoogle-search:focus,
+.reGoogle-search:focus-visible,
+.lucky:hover,
+.lucky:focus,
+.lucky:focus:focus-visible {
+  box-shadow: 1px 0px 7px rgb(224, 224, 224);
+  border: 1px solid rgb(212, 212, 212);
+}
+
+/*** Footer Styles ***/
+
+footer,
+.footer-col-left,
+.footer-col-mid,
+.footer-col-right {
+  background-color: rgb(232, 237, 252);
+}

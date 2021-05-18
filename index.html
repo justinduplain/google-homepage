@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>reGoogle</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
-  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div id="container">
     <header class="flex-header">
       <div class="header-col-left">
         <nav id="header-nav" class="header-nav">
@@ -23,7 +23,7 @@
           <ul class="nav-list">
             <li>Gmail</li>
             <li>Images</li>
-            <li>Apps</li>
+            <li><img id="apps" src="img/menu-icon.svg" alt="apps icon"></li>
             <li>User</li>
           </ul>
         </nav>
@@ -32,15 +32,18 @@
 
     <main class="flex-main">
       <div class="main-col-mid">
+        <h1 class="SROnly">reGoogle</h1>
         <div id="logo">
-        <h1>
-          <span class="SROnly">reGoogle</span>
-          <img src="img/reGoogle_2015_logo.svg" alt=""></h1>
+          <img src="img/reGoogle_2015_logo.svg" alt="">
         </div>
-        <div>
+        <div id="search">
           <form>
-            <input type="text" />
-            <input type="button">reSearch
+            <label for="term" class="SROnly">Search for:</label>
+            <input type="text" id="term">
+            <div class="submit-section">
+              <div><input type="submit" value="reGoogle Search" class="reGoogle-search"></div>
+              <div><input type="submit" value="I'm Feeling Lucky" class="lucky"></div>
+          </div>
           </form>
         </div>
       </div>
@@ -48,7 +51,7 @@
 
     <footer class="flex-footer">
       <div class="footer-col-left">
-        <nav id="footer-nav" class="footer-nav">
+        <nav class="footer-nav">
           <ul class="nav-list">
             <li>Advertising</li>
             <li>Business</li>
@@ -57,18 +60,19 @@
         </nav>
       </div>
       <div class="footer-col-mid">
-        <nav id="footer-nav" class="footer-nav">
+        <nav class="footer-nav">
           <ul class="nav-list">
-            <li>Carbon neutral since 2007</li>
+            <li><img id="leaf" src="img/leaf-carbon.png" alt="">
+              Carbon neutral since 2007</li>
           </ul>
         </nav>
       </div>
       <div class="footer-col-right">
-        <nav id="footer-nav" class="footer-nav">
+        <nav class="footer-nav">
           <ul class="nav-list">
             <li>Privacy</li>
             <li>Terms</li>
-            <li>Settiings</li>
+            <li>Settings</li>
           </ul>
         </nav>
       </div>
