@@ -58,7 +58,6 @@ footer {
 main {
 	flex: auto;
 	display: flex;
-	align-items: top;
 	justify-content: center;
 }
 
